@@ -1,239 +1,407 @@
-mixed-port: 7890
-allow-lan: true
-mode: rule
-log-level: info
-external-controller: 127.0.0.1:9090
+# Clash 完整配置文件（包含你提供的全部节点）
 
-####################
-# Proxies
-####################
+port: 7890
+socks-port: 7891
+redir-port: 7892
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 0.0.0.0:9090
+ipv6: false
+
 proxies:
-  # ===== 香港 =====
-  - name: "🇭🇰 香港高速专线1[4K]"
+  - name: "香港高速专线1[4K]"
     type: socks5
     server: t-uc222-10067.ci-lab.com
     port: 80
-    username: "pro:u2025887"
-    password: "3de79113-832d-436c-a2c6-dcf62f0be38e"
-    udp: true
-    network: ws
-    ws-opts:
-      path: /gost
-      headers: { Host: t-uc222-10067.ci-lab.com }
-
-  - name: "🇭🇰 香港高速专线2[4K]"
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "香港高速专线2[4K]"
     type: socks5
     server: t-uc222-10068.ci-lab.com
     port: 80
-    username: "pro:u2025887"
-    password: "3de79113-832d-436c-a2c6-dcf62f0be38e"
-    udp: true
-    network: ws
-    ws-opts:
-      path: /gost
-      headers: { Host: t-uc222-10068.ci-lab.com }
-
-  - name: "🇭🇰 香港高速专线3[推荐]"
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "香港高速专线3[推荐]"
     type: socks5
     server: t-uc222-10069.ci-lab.com
     port: 80
-    username: "pro:u2025887"
-    password: "3de79113-832d-436c-a2c6-dcf62f0be38e"
-    udp: true
-    network: ws
-    ws-opts:
-      path: /gost
-      headers: { Host: t-uc222-10069.ci-lab.com }
-
-  - name: "🇭🇰 香港专线4"
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "香港高速专线4[推荐]"
     type: socks5
     server: t-hkbn75-1001.ci-lab.com
     port: 80
-    username: "pro:u2025887"
-    password: "3de79113-832d-436c-a2c6-dcf62f0be38e"
-    udp: true
-    network: ws
-    ws-opts:
-      path: /gost
-      headers: { Host: t-hkbn75-1001.ci-lab.com }
-
-  - name: "🇭🇰 香港专线5"
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "香港高速专线5[推荐]"
     type: socks5
     server: t-hkbn75-1002.ci-lab.com
     port: 80
-    username: "pro:u2025887"
-    password: "3de79113-832d-436c-a2c6-dcf62f0be38e"
-    udp: true
-    network: ws
-    ws-opts:
-      path: /gost
-      headers: { Host: t-hkbn75-1002.ci-lab.com }
-
-  # ===== 日本 =====
-  - name: "🇯🇵 日本-东京1"
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "香港专线6"
+    type: socks5
+    server: t-hkbn75-1000.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "日本 - 东京1"
     type: socks5
     server: t-hkbn75-1003.ci-lab.com
     port: 80
-    username: "pro:u2025887"
-    password: "3de79113-832d-436c-a2c6-dcf62f0be38e"
-    udp: true
-    network: ws
-    ws-opts:
-      path: /gost
-      headers: { Host: t-hkbn75-1003.ci-lab.com }
-
-  - name: "🇯🇵 日本-东京2"
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "日本 - 东京2"
     type: socks5
     server: t-tx104-1004.ci-lab.com
     port: 80
-    username: "pro:u2025887"
-    password: "3de79113-832d-436c-a2c6-dcf62f0be38e"
-    udp: true
-    network: ws
-    ws-opts:
-      path: /gost
-      headers: { Host: t-tx104-1004.ci-lab.com }
-
-  # ===== 亚洲 =====
-  - name: "🇸🇬 新加坡"
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "台湾 - 彰化"
     type: socks5
-    server: t-tx104-1005.ci-lab.com
+    server: t-tx104-1006.ci-lab.com
     port: 80
-    username: "pro:u2025887"
-    password: "3de79113-832d-436c-a2c6-dcf62f0be38e"
-    udp: true
-    network: ws
-    ws-opts:
-      path: /gost
-      headers: { Host: t-tx104-1005.ci-lab.com }
-
-  - name: "🇹🇼 台湾-台北"
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "台湾 - 台北"
     type: socks5
     server: t-tx104-1008.ci-lab.com
     port: 80
-    username: "pro:u2025887"
-    password: "3de79113-832d-436c-a2c6-dcf62f0be38e"
-    udp: true
-    network: ws
-    ws-opts:
-      path: /gost
-      headers: { Host: t-tx104-1008.ci-lab.com }
-
-  - name: "🇰🇷 韩国-首尔"
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "台湾 - 新北"
+    type: socks5
+    server: t-hkbn75-1007.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "新加坡"
+    type: socks5
+    server: t-tx104-1005.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "韩国 - 首尔1"
     type: socks5
     server: t-tx104-1009.ci-lab.com
     port: 80
-    username: "pro:u2025887"
-    password: "3de79113-832d-436c-a2c6-dcf62f0be38e"
-    udp: true
-    network: ws
-    ws-opts:
-      path: /gost
-      headers: { Host: t-tx104-1009.ci-lab.com }
-
-  # ===== 欧美 =====
-  - name: "🇺🇸 美国-洛杉矶"
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "韩国 - 首尔2"
     type: socks5
-    server: t-tx145-1024.ci-lab.com
+    server: t-tx104-1010.ci-lab.com
     port: 80
-    username: "pro:u2025887"
-    password: "3de79113-832d-436c-a2c6-dcf62f0be38e"
-    udp: true
-    network: ws
-    ws-opts:
-      path: /gost
-      headers: { Host: t-tx145-1024.ci-lab.com }
-
-  - name: "🇬🇧 英国-伦敦"
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "泰国 - 曼谷"
     type: socks5
-    server: t-tx145-1037.ci-lab.com
+    server: t-tx104-1011.ci-lab.com
     port: 80
-    username: "pro:u2025887"
-    password: "3de79113-832d-436c-a2c6-dcf62f0be38e"
-    udp: true
-    network: ws
-    ws-opts:
-      path: /gost
-      headers: { Host: t-tx145-1037.ci-lab.com }
-
-  - name: "🇩🇪 德国-柏林"
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "印度 - 班加罗尔"
     type: socks5
-    server: t-tx145-1034.ci-lab.com
+    server: t-tx104-1016.ci-lab.com
     port: 80
-    username: "pro:u2025887"
-    password: "3de79113-832d-436c-a2c6-dcf62f0be38e"
-    udp: true
-    network: ws
-    ws-opts:
-      path: /gost
-      headers: { Host: t-tx145-1034.ci-lab.com }
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "印度 - 孟买"
+    type: socks5
+    server: t-tx104-1015.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "菲律宾 - 马尼拉"
+    type: socks5
+    server: t-tx104-1017.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "菲律宾 - 马卡蒂"
+    type: socks5
+    server: t-tx104-1018.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "阿联酋 - 迪拜"
+    type: socks5
+    server: t-tx104-1019.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "阿联酋 - 富查伊哈"
+    type: socks5
+    server: t-tx104-1020.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "沙特阿拉伯 - 利雅得"
+    type: socks5
+    server: t-tx104-1024.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "卡塔尔 - 多哈"
+    type: socks5
+    server: t-tx104-1025.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "澳大利亚 - 悉尼"
+    type: socks5
+    server: t-tx104-1021.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "澳大利亚 - 墨尔本"
+    type: socks5
+    server: t-tx104-1022.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "新西兰 - 奥克兰"
+    type: socks5
+    server: t-tx104-1023.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "美国 - 旧金山"
+    type: socks5
+    server: t-145-1025.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "美国 - 洛杉矶"
+    type: socks5
+    server: t-145-1024.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "美国 - 西雅图"
+    type: socks5
+    server: t-145-1026.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "美国 - 达拉斯"
+    type: socks5
+    server: t-145-1028.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "美国 - 亚特兰大"
+    type: socks5
+    server: t-145-1027.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "加拿大 - 温哥华"
+    type: socks5
+    server: t-145-1029.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "墨西哥"
+    type: socks5
+    server: t-145-1030.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "俄罗斯 - 新西伯利亚"
+    type: socks5
+    server: t-145-1031.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "俄罗斯 - 莫斯科"
+    type: socks5
+    server: t-145-1032.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "西班牙 - 马德里"
+    type: socks5
+    server: t-145-1033.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "德国 - 柏林"
+    type: socks5
+    server: t-145-1034.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "德国 - 法兰克福"
+    type: socks5
+    server: t-145-1035.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "捷克 - 布拉格"
+    type: socks5
+    server: t-145-1036.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "英国 - 伦敦"
+    type: socks5
+    server: t-145-1037.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "土耳其 - 伊斯坦布尔"
+    type: socks5
+    server: t-145-1038.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "法国 - 里昂"
+    type: socks5
+    server: t-145-1039.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "荷兰 - 阿姆斯特丹"
+    type: socks5
+    server: t-145-1041.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "意大利 - 巴勒莫"
+    type: socks5
+    server: t-145-1042.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "芬兰 - 赫尔辛基"
+    type: socks5
+    server: t-145-1043.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "希腊 - 雅典"
+    type: socks5
+    server: t-145-1052.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "爱尔兰 - 都柏林"
+    type: socks5
+    server: t-145-1053.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "摩尔多瓦 - 基希讷乌"
+    type: socks5
+    server: t-145-1044.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "智利 - 瓦尔迪维亚"
+    type: socks5
+    server: t-145-1045.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "巴西 - 圣保罗"
+    type: socks5
+    server: t-145-1046.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "阿根廷 - 布宜诺斯艾利斯"
+    type: socks5
+    server: t-145-1047.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "哥伦比亚 - 波哥大"
+    type: socks5
+    server: t-145-1054.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "南非 - 约翰内斯堡"
+    type: socks5
+    server: t-145-1050.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "坦桑尼亚 - 达累斯萨拉姆"
+    type: socks5
+    server: t-145-1051.ci-lab.com
+    port: 80
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
+  - name: "Wakanda"
+    type: socks5
+    server: 121.14.152.216
+    port: 1003
+    username: u2025887
+    password: 3de79113-832d-436c-a2c6-dcf62f0be38e
 
-####################
-# Proxy Groups
-####################
 proxy-groups:
-  - name: "🚀 总入口"
-    type: select
-    proxies:
-      - ♻️ 自动优选
-      - 🇭🇰 香港自动
-      - 🇯🇵 日本自动
-      - 🌏 亚洲自动
-      - 🌍 欧美自动
-      - DIRECT
-
-  - name: "♻️ 自动优选"
+  - name: "自动选择"
     type: url-test
+    proxies:
+      - "香港高速专线1[4K]"
+      - "香港高速专线2[4K]"
+      - "香港高速专线3[推荐]"
+      - "香港高速专线4[推荐]"
+      - "香港高速专线5[推荐]"
+      - "香港专线6"
+      - "日本 - 东京1"
+      - "日本 - 东京2"
+      - "台湾 - 彰化"
+      - "台湾 - 台北"
+      - "台湾 - 新北"
+      - "新加坡"
+      - "韩国 - 首尔1"
+      - "韩国 - 首尔2"
+      - "泰国 - 曼谷"
+      - "印度 - 班加罗尔"
+      - "印度 - 孟买"
+      - "菲律宾 - 马尼拉"
+      - "菲律宾 - 马卡蒂"
+      - "阿联酋 - 迪拜"
+      - "阿联酋 - 富查伊哈"
+      - "沙特阿拉伯 - 利雅得"
+      - "卡塔尔 - 多哈"
+      - "澳大利亚 - 悉尼"
+      - "澳大利亚 - 墨尔本"
+      - "新西兰 - 奥克兰"
+      - "美国 - 旧金山"
+      - "美国 - 洛杉矶"
+      - "美国 - 西雅图"
+      - "美国 - 达拉斯"
+      - "美国 - 亚特兰大"
+      - "加拿大 - 温哥华"
+      - "墨西哥"
+      - "俄罗斯 - 新西伯利亚"
+      - "俄罗斯 - 莫斯科"
+      - "西班牙 - 马德里"
+      - "德国 - 柏林"
+      - "德国 - 法兰克福"
+      - "捷克 - 布拉格"
+      - "英国 - 伦敦"
+      - "土耳其 - 伊斯坦布尔"
+      - "法国 - 里昂"
+      - "荷兰 - 阿姆斯特丹"
+      - "意大利 - 巴勒莫"
+      - "芬兰 - 赫尔辛基"
+      - "希腊 - 雅典"
+      - "爱尔兰 - 都柏林"
+      - "摩尔多瓦 - 基希讷乌"
+      - "智利 - 瓦尔迪维亚"
+      - "巴西 - 圣保罗"
+      - "阿根廷 - 布宜诺斯艾利斯"
+      - "哥伦比亚 - 波哥大"
+      - "南非 - 约翰内斯堡"
+      - "坦桑尼亚 - 达累斯萨拉姆"
+      - "Wakanda"
     url: http://www.gstatic.com/generate_204
     interval: 300
-    tolerance: 50
-    proxies:
-      - 🇭🇰 香港自动
-      - 🇯🇵 日本自动
-      - 🌏 亚洲自动
-      - 🌍 欧美自动
 
-  - name: "🇭🇰 香港自动"
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    proxies:
-      - 🇭🇰 香港高速专线1[4K]
-      - 🇭🇰 香港高速专线2[4K]
-      - 🇭🇰 香港高速专线3[推荐]
-      - 🇭🇰 香港专线4
-      - 🇭🇰 香港专线5
-
-  - name: "🇯🇵 日本自动"
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    proxies:
-      - 🇯🇵 日本-东京1
-      - 🇯🇵 日本-东京2
-
-  - name: "🌏 亚洲自动"
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    proxies:
-      - 🇸🇬 新加坡
-      - 🇹🇼 台湾-台北
-      - 🇰🇷 韩国-首尔
-
-  - name: "🌍 欧美自动"
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    proxies:
-      - 🇺🇸 美国-洛杉矶
-      - 🇬🇧 英国-伦敦
-      - 🇩🇪 德国-柏林
-
-####################
-# Rules
-####################
 rules:
-  - GEOIP,LAN,DIRECT
-  - GEOIP,CN,DIRECT
-  - MATCH,🚀 总入口
+  - MATCH, 自动选择
