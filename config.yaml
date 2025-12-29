@@ -1,0 +1,239 @@
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+
+####################
+# Proxies
+####################
+proxies:
+  # ===== 香港 =====
+  - name: "🇭🇰 香港高速专线1[4K]"
+    type: socks5
+    server: t-uc222-10067.ci-lab.com
+    port: 80
+    username: "pro:u2025887"
+    password: "3de79113-832d-436c-a2c6-dcf62f0be38e"
+    udp: true
+    network: ws
+    ws-opts:
+      path: /gost
+      headers: { Host: t-uc222-10067.ci-lab.com }
+
+  - name: "🇭🇰 香港高速专线2[4K]"
+    type: socks5
+    server: t-uc222-10068.ci-lab.com
+    port: 80
+    username: "pro:u2025887"
+    password: "3de79113-832d-436c-a2c6-dcf62f0be38e"
+    udp: true
+    network: ws
+    ws-opts:
+      path: /gost
+      headers: { Host: t-uc222-10068.ci-lab.com }
+
+  - name: "🇭🇰 香港高速专线3[推荐]"
+    type: socks5
+    server: t-uc222-10069.ci-lab.com
+    port: 80
+    username: "pro:u2025887"
+    password: "3de79113-832d-436c-a2c6-dcf62f0be38e"
+    udp: true
+    network: ws
+    ws-opts:
+      path: /gost
+      headers: { Host: t-uc222-10069.ci-lab.com }
+
+  - name: "🇭🇰 香港专线4"
+    type: socks5
+    server: t-hkbn75-1001.ci-lab.com
+    port: 80
+    username: "pro:u2025887"
+    password: "3de79113-832d-436c-a2c6-dcf62f0be38e"
+    udp: true
+    network: ws
+    ws-opts:
+      path: /gost
+      headers: { Host: t-hkbn75-1001.ci-lab.com }
+
+  - name: "🇭🇰 香港专线5"
+    type: socks5
+    server: t-hkbn75-1002.ci-lab.com
+    port: 80
+    username: "pro:u2025887"
+    password: "3de79113-832d-436c-a2c6-dcf62f0be38e"
+    udp: true
+    network: ws
+    ws-opts:
+      path: /gost
+      headers: { Host: t-hkbn75-1002.ci-lab.com }
+
+  # ===== 日本 =====
+  - name: "🇯🇵 日本-东京1"
+    type: socks5
+    server: t-hkbn75-1003.ci-lab.com
+    port: 80
+    username: "pro:u2025887"
+    password: "3de79113-832d-436c-a2c6-dcf62f0be38e"
+    udp: true
+    network: ws
+    ws-opts:
+      path: /gost
+      headers: { Host: t-hkbn75-1003.ci-lab.com }
+
+  - name: "🇯🇵 日本-东京2"
+    type: socks5
+    server: t-tx104-1004.ci-lab.com
+    port: 80
+    username: "pro:u2025887"
+    password: "3de79113-832d-436c-a2c6-dcf62f0be38e"
+    udp: true
+    network: ws
+    ws-opts:
+      path: /gost
+      headers: { Host: t-tx104-1004.ci-lab.com }
+
+  # ===== 亚洲 =====
+  - name: "🇸🇬 新加坡"
+    type: socks5
+    server: t-tx104-1005.ci-lab.com
+    port: 80
+    username: "pro:u2025887"
+    password: "3de79113-832d-436c-a2c6-dcf62f0be38e"
+    udp: true
+    network: ws
+    ws-opts:
+      path: /gost
+      headers: { Host: t-tx104-1005.ci-lab.com }
+
+  - name: "🇹🇼 台湾-台北"
+    type: socks5
+    server: t-tx104-1008.ci-lab.com
+    port: 80
+    username: "pro:u2025887"
+    password: "3de79113-832d-436c-a2c6-dcf62f0be38e"
+    udp: true
+    network: ws
+    ws-opts:
+      path: /gost
+      headers: { Host: t-tx104-1008.ci-lab.com }
+
+  - name: "🇰🇷 韩国-首尔"
+    type: socks5
+    server: t-tx104-1009.ci-lab.com
+    port: 80
+    username: "pro:u2025887"
+    password: "3de79113-832d-436c-a2c6-dcf62f0be38e"
+    udp: true
+    network: ws
+    ws-opts:
+      path: /gost
+      headers: { Host: t-tx104-1009.ci-lab.com }
+
+  # ===== 欧美 =====
+  - name: "🇺🇸 美国-洛杉矶"
+    type: socks5
+    server: t-tx145-1024.ci-lab.com
+    port: 80
+    username: "pro:u2025887"
+    password: "3de79113-832d-436c-a2c6-dcf62f0be38e"
+    udp: true
+    network: ws
+    ws-opts:
+      path: /gost
+      headers: { Host: t-tx145-1024.ci-lab.com }
+
+  - name: "🇬🇧 英国-伦敦"
+    type: socks5
+    server: t-tx145-1037.ci-lab.com
+    port: 80
+    username: "pro:u2025887"
+    password: "3de79113-832d-436c-a2c6-dcf62f0be38e"
+    udp: true
+    network: ws
+    ws-opts:
+      path: /gost
+      headers: { Host: t-tx145-1037.ci-lab.com }
+
+  - name: "🇩🇪 德国-柏林"
+    type: socks5
+    server: t-tx145-1034.ci-lab.com
+    port: 80
+    username: "pro:u2025887"
+    password: "3de79113-832d-436c-a2c6-dcf62f0be38e"
+    udp: true
+    network: ws
+    ws-opts:
+      path: /gost
+      headers: { Host: t-tx145-1034.ci-lab.com }
+
+####################
+# Proxy Groups
+####################
+proxy-groups:
+  - name: "🚀 总入口"
+    type: select
+    proxies:
+      - ♻️ 自动优选
+      - 🇭🇰 香港自动
+      - 🇯🇵 日本自动
+      - 🌏 亚洲自动
+      - 🌍 欧美自动
+      - DIRECT
+
+  - name: "♻️ 自动优选"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇭🇰 香港自动
+      - 🇯🇵 日本自动
+      - 🌏 亚洲自动
+      - 🌍 欧美自动
+
+  - name: "🇭🇰 香港自动"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - 🇭🇰 香港高速专线1[4K]
+      - 🇭🇰 香港高速专线2[4K]
+      - 🇭🇰 香港高速专线3[推荐]
+      - 🇭🇰 香港专线4
+      - 🇭🇰 香港专线5
+
+  - name: "🇯🇵 日本自动"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - 🇯🇵 日本-东京1
+      - 🇯🇵 日本-东京2
+
+  - name: "🌏 亚洲自动"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - 🇸🇬 新加坡
+      - 🇹🇼 台湾-台北
+      - 🇰🇷 韩国-首尔
+
+  - name: "🌍 欧美自动"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - 🇺🇸 美国-洛杉矶
+      - 🇬🇧 英国-伦敦
+      - 🇩🇪 德国-柏林
+
+####################
+# Rules
+####################
+rules:
+  - GEOIP,LAN,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,🚀 总入口
